@@ -3,6 +3,7 @@
 import * as React from "react"
 import Link from "next/link"
 import flores from '../../public/img/flores.png';
+import chocolate from '../../public/img/chocolate.png';
 import bolo from '../../public/img/bolo.png';
 
 
@@ -15,7 +16,7 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu"
-import { AlignCenter, Search, ShoppingBag } from "lucide-react"
+import { AlignCenter, Diamond, Search, ShoppingBag } from "lucide-react"
 
 
 import {
@@ -109,151 +110,318 @@ export default function Home() {
         </div>
       </header>
 
-      <main className="flex overflow-hidden relative w-full h-[90vh]">
+      <main className="w-screen h-full">
 
-        <div className="hidden md:block">
-          <div className="absolute top-[-70px] left-[-220px] w-[500px] h-[800px] overflow-hidden">
-            <Image
-              src={flores}
-              alt="Descrição da imagem"
-              width={450}
-              height={250}
-              className="-rotate-12 "
-            />
+        <div className="flex overflow-hidden relative w-full h-[90vh]">
+          <div className="hidden md:block">
+            <div className="absolute top-[-70px] left-[-220px] w-[500px] h-[800px] overflow-hidden">
+              <Image
+                src={flores}
+                alt="Descrição da imagem"
+                width={450}
+                height={250}
+                className="-rotate-12 "
+              />
 
-            <Image
-              src={flores}
-              alt="Descrição da imagem"
-              width={450}
-              height={250}
-              className="-rotate-12"
-            />
-          </div>
-
-          <div className="absolute top-40 ml-35 w-[300px]">
-
-            <div className="flex w-[70rem] h-[20rem] gap-10">
-              <div>
-                <Image
-                  src={bolo}
-                  alt="Descrição da imagem"
-                  width={650}
-                  height={400}
-                />
-              </div>
-
-              <div className="flex flex-col text-center gap-2">
-                <h2 className="text-2xl marck-script-regular text-[#F4DA43]">Chef masterpiece af</h2>
-                <h1 className="text-6xl afacad ">LA DOLCE VITA</h1>
-                <div>
-                  img
-                </div>
-                <p className="text-1xl w-[500px] marck-script-regular">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-
-                <div className="flex w-full justify-center gap-4 py-4">
-                  <Button className="cursor-pointer rounded-[2px]">DESCOBRIR</Button>
-                  <Button
-                    className="bg-white text-[#DAC23A] border border-[#DAC23A] hover:bg-[#DAC23A]/10 transition-colors cursor-pointer rounded-[2px]"
-                  >COMPRAR</Button>
-                </div>
-              </div>
-
+              <Image
+                src={flores}
+                alt="Descrição da imagem"
+                width={450}
+                height={250}
+                className="-rotate-12"
+              />
             </div>
+
+            <div className="absolute top-40 ml-35 w-[300px]">
+
+              <div className="flex w-[70rem] h-[20rem] gap-10">
+                <div>
+                  <Image
+                    src={bolo}
+                    alt="Descrição da imagem"
+                    width={650}
+                    height={400}
+                  />
+                </div>
+
+                <div className="flex flex-col text-center gap-2 items-center">
+                  <h2 className="text-2xl marck-script-regular text-[#F4DA43]">Chef masterpiece af</h2>
+                  <h1 className="text-6xl afacad ">LA DOLCE VITA</h1>
+                  <div className="flex w-[80%] items-center gap-1">
+                    <div className="border border-[#DAC23A] bg-[#DAC23A] w-full h-0.5"></div>
+                    <Diamond className="stroke-[#DAC23A] w-8 h-8" />
+                    <div className="border border-[#DAC23A] bg-[#DAC23A] w-full h-0.5"></div>
+                  </div>
+                  <p className="text-1xl w-[500px] marck-script-regular">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+                  <div className="flex w-full justify-center gap-4 py-4">
+                    <Button className="cursor-pointer rounded-[2px]">DESCOBRIR</Button>
+                    <Button
+                      className="bg-white text-[#DAC23A] border border-[#DAC23A] hover:bg-[#DAC23A]/10 transition-colors cursor-pointer rounded-[2px]"
+                    >COMPRAR</Button>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <div className="absolute top-[-90px] right-[-220px] w-[500px] h-[800px] overflow-hidden">
+              <Image
+                src={flores}
+                alt="Descrição da imagem"
+                width={500}
+                height={300}
+                className="rotate-[-48deg]"
+              />
+
+              <Image
+                src={flores}
+                alt="Descrição da imagem"
+                width={500}
+                height={300}
+                className="rotate-[-48deg]"
+              />
+            </div>
+
           </div>
 
-          <div className="absolute top-[-90px] right-[-220px] w-[500px] h-[800px] overflow-hidden">
-            <Image
-              src={flores}
-              alt="Descrição da imagem"
-              width={500}
-              height={300}
-              className="rotate-[-48deg]"
-            />
+          <div className="block md:hidden">
+            <div className="absolute top-[-60px] left-[-160px] w-[500px] h-[800px] overflow-hidden">
+              <Image
+                src={flores}
+                alt="Descrição da imagem"
+                width={244}
+                height={688}
+                className="rotate-[-15deg]"
+              />
 
-            <Image
-              src={flores}
-              alt="Descrição da imagem"
-              width={500}
-              height={300}
-              className="rotate-[-48deg]"
-            />
+              <Image
+                src={flores}
+                alt="Descrição da imagem"
+                width={244}
+                height={688}
+                className="rotate-[-15deg] absolute top-[420px]"
+              />
+            </div>
+
+            <div className="absolute top-21 ml-10 w-[350px]">
+
+              <div className="flex flex-col-reverse w-[20rem] h-[25rem] gap-5">
+                <div>
+                  <Image
+                    src={bolo}
+                    alt="Descrição da imagem"
+                    width={320}
+                    height={10}
+                  />
+                </div>
+
+                <div className="flex flex-col text-center gap-2 items-center">
+                  <h2 className="text-1xl marck-script-regular text-[#F4DA43]">Chef masterpiece af</h2>
+                  <h1 className="text-3xl afacad ">LA DOLCE VITA</h1>
+                  <div className="flex w-[80%] items-center gap-1">
+                    <div className="border border-[#DAC23A] bg-[#DAC23A] w-full h-0.5"></div>
+                    <Diamond className="stroke-[#DAC23A] w-8 h-8" />
+                    <div className="border border-[#DAC23A] bg-[#DAC23A] w-full h-0.5"></div>
+                  </div>
+                  <p className="text-sm w-[350px] marck-script-regular">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+                  <div className="flex w-full justify-center gap-4 py-4">
+                    <Button className="cursor-pointer rounded-[2px]">DESCOBRIR</Button>
+                    <Button
+                      className="bg-white text-[#DAC23A] border border-[#DAC23A] hover:bg-[#DAC23A]/10 transition-colors cursor-pointer rounded-[2px]"
+                    >COMPRAR</Button>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <div className="relative top-[-60px] right-[-290px] w-[500px] h-[800px] overflow-hidden">
+              <Image
+                src={flores}
+                alt="Descrição da imagem"
+                width={244}
+                height={688}
+                className="rotate-[-35deg]"
+              />
+
+              <Image
+                src={flores}
+                alt="Descrição da imagem"
+                width={244}
+                height={688}
+                className="rotate-[-35deg] absolute top-[420px]"
+              />
+            </div>
+
           </div>
 
         </div>
 
-        <div className="block md:hidden">
-          <div className="absolute top-[-60px] left-[-160px] w-[500px] h-[800px] overflow-hidden">
-            <Image
-              src={flores}
-              alt="Descrição da imagem"
-              width={244}
-              height={688}
-              className="rotate-[-15deg]"
-            />
+        <div className="flex flex-col overflow-hidden relative w-screen h-full">
+          <div className="hidden md:block">
+            <div className="absolute top-[-70px] left-[-220px] w-[500px] h-[800px] overflow-hidden">
+              <Image
+                src={chocolate}
+                alt="Descrição da imagem"
+                width={450}
+                height={250}
+                className="-rotate-12 "
+              />
 
-            <Image
-              src={flores}
-              alt="Descrição da imagem"
-              width={244}
-              height={688}
-              className="rotate-[-15deg] absolute top-[420px]"
-            />
-          </div>
 
-          <div className="absolute top-21 ml-4 w-[350px]">
+              <Image
+                src={chocolate}
+                alt="Descrição da imagem"
+                width={450}
+                height={250}
+                className="-rotate-12"
+              />
+            </div>
 
-            <div className="flex flex-col-reverse w-[20rem] h-[25rem] gap-5">
-              <div>
-                <Image
-                  src={bolo}
-                  alt="Descrição da imagem"
-                  width={320}
-                  height={10}
-                />
-              </div>
+            <div className="absolute top-[-70px] left-[150px] w-[500px] h-[800px] overflow-hidden">
+              <Image
+                src={chocolate}
+                alt="Descrição da imagem"
+                width={150}
+                height={250}
+                className="-rotate-12 "
+              />
 
-              <div className="flex flex-col text-center gap-2">
-                <h2 className="text-1xl marck-script-regular text-[#F4DA43]">Chef masterpiece af</h2>
-                <h1 className="text-3xl afacad ">LA DOLCE VITA</h1>
-                <div>
-                  img
-                </div>
-                <p className="text-sm w-[350px] marck-script-regular">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 
-                <div className="flex w-full justify-center gap-4 py-4">
-                  <Button className="cursor-pointer rounded-[2px]">DESCOBRIR</Button>
-                  <Button
-                    className="bg-white text-[#DAC23A] border border-[#DAC23A] hover:bg-[#DAC23A]/10 transition-colors cursor-pointer rounded-[2px]"
-                  >COMPRAR</Button>
+              <Image
+                src={chocolate}
+                alt="Descrição da imagem"
+                width={150}
+                height={250}
+                className="-rotate-12"
+              />
+            </div>
+
+            <div className="absolute top-40 ml-35 w-[300px]">
+
+              <div className="flex w-[80rem] h-[20rem] justify-center">
+
+                <div className="flex flex-col text-center gap-2 items-center">
+                  <h2 className="text-2xl marck-script-regular text-[#F4DA43]">familly traditior</h2>
+                  <h1 className="text-6xl afacad ">OUR STOTY</h1>
+                  <div className="flex w-[80%] items-center gap-1">
+                    <div className="border border-[#DAC23A] bg-[#DAC23A] w-full h-0.5"></div>
+                    <Diamond className="stroke-[#DAC23A] w-8 h-8" />
+                    <div className="border border-[#DAC23A] bg-[#DAC23A] w-full h-0.5"></div>
+                  </div>
+                  <p className="text-1xl w-[500px] marck-script-regular">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+                  <h2 className="text-2xl ole-regular text-[#D4D4D4]">fernandes</h2>
                 </div>
               </div>
 
             </div>
+
+
+            <div className="absolute top-[-70px] right-[-150px] w-[500px] h-[800px] overflow-hidden">
+              <Image
+                src={chocolate}
+                alt="Descrição da imagem"
+                width={150}
+                height={250}
+                className="-rotate-12 "
+              />
+
+
+              <Image
+                src={chocolate}
+                alt="Descrição da imagem"
+                width={150}
+                height={250}
+                className="-rotate-12"
+              />
+            </div>
+
+            <div className="absolute top-[-90px] right-[-220px] w-[500px] h-[800px] overflow-hidden">
+
+              <Image
+                src={chocolate}
+                alt="Descrição da imagem"
+                width={500}
+                height={300}
+                className="rotate-[-48deg]"
+              />
+
+              <Image
+                src={chocolate}
+                alt="Descrição da imagem"
+                width={500}
+                height={300}
+                className="rotate-[-48deg]"
+              />
+            </div>
+
           </div>
 
-          <div className="relative top-[-60px] right-[-290px] w-[500px] h-[800px] overflow-hidden">
-            <Image
-              src={flores}
-              alt="Descrição da imagem"
-              width={244}
-              height={688}
-              className="rotate-[-35deg]"
-            />
+          <div className="block md:hidden">
+            <div className="absolute top-[-10px] left-[-160px] w-[500px] h-[800px] overflow-hidden">
+              <Image
+                src={chocolate}
+                alt="Descrição da imagem"
+                width={280}
+                height={688}
+                className="rotate-[-15deg]"
+              />
 
-            <Image
-              src={flores}
-              alt="Descrição da imagem"
-              width={244}
-              height={688}
-              className="rotate-[-35deg] absolute top-[420px]"
-            />
+              <Image
+                src={chocolate}
+                alt="Descrição da imagem"
+                width={280}
+                height={688}
+                className="rotate-[-15deg] absolute top-[420px]"
+              />
+            </div>
+
+            <div className="absolute top-21 ml-10 w-[350px]">
+
+              <div className="flex flex-col-reverse w-[20rem] h-[25rem] gap-5">
+
+                <div className="flex flex-col text-center gap-2 items-center">
+                  <h2 className="text-1xl marck-script-regular text-[#F4DA43]">Chef masterpiece af</h2>
+                  <h1 className="text-3xl afacad ">LA DOLCE VITA</h1>
+                  <div className="flex w-[80%] items-center gap-1">
+                    <div className="border border-[#DAC23A] bg-[#DAC23A] w-full h-0.5"></div>
+                    <Diamond className="stroke-[#DAC23A] w-8 h-8" />
+                    <div className="border border-[#DAC23A] bg-[#DAC23A] w-full h-0.5"></div>
+                  </div>
+                  <p className="text-sm w-[350px] marck-script-regular">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+                  <h2 className="text-2xl ole-regular text-[#D4D4D4]">fernandes</h2>
+                </div>
+              </div>
+
+            </div>
+
+            <div className="relative top-[-10px] right-[-290px] w-[500px] h-[800px] overflow-hidden">
+              <Image
+                src={chocolate}
+                alt="Descrição da imagem"
+                width={280}
+                height={688}
+                className="rotate-[-35deg]"
+              />
+
+              <Image
+                src={chocolate}
+                alt="Descrição da imagem"
+                width={280}
+                height={688}
+                className="rotate-[-35deg] absolute top-[420px]"
+              />
+            </div>
           </div>
-
         </div>
-      </main>
+      </main >
       <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
 
       </footer>
-    </div>
+    </div >
   );
 }
