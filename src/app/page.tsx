@@ -130,7 +130,7 @@ export default function Home() {
             />
           </div>
 
-          <div className="absolute top-40 ml-40 w-[300px]">
+          <div className="absolute top-40 ml-35 w-[300px]">
 
             <div className="flex w-[70rem] h-[20rem] gap-10">
               <div>
