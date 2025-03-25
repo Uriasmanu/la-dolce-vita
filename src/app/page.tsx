@@ -1,102 +1,201 @@
-import Image from "next/image";
+"use client"
+
+import * as React from "react"
+import Link from "next/link"
+import flores from '../../public/img/flores.png';
+
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+  navigationMenuTriggerStyle,
+} from "@/components/ui/navigation-menu"
+import { AlignCenter, Search, ShoppingBag } from "lucide-react"
+
+
+import {
+  Sheet,
+  SheetContent,
+  SheetDescription,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet"
+import Image from "next/image"
+
+
+const menuItems: { title: string; href: string }[] = [
+  {
+    title: "INICIO",
+    href: "#inicio",
+  },
+  {
+    title: "SOBRE",
+    href: "#sobre",
+  },
+  {
+    title: "PREÇOS",
+    href: "#precos",
+  },
+  {
+    title: "PRODUTOS",
+    href: "#produtos",
+  },
+  {
+    title: "CONTATO",
+    href: "#contato",
+  },
+]
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-end min-h-screen pl-8 pt-8 pb-20 gap-8 sm:pl-15 sm:pt-15 sm:pb-20 font-[family-name:var(--font-geist-sans)]">
+      <header>
+        <div className="hidden md:block pr-30">
+          <NavigationMenu>
+            <NavigationMenuList className="flex gap-8">
+              {menuItems.map((item, index) => (
+                <NavigationMenuItem key={index}>
+                  <Link href={item.href} legacyBehavior passHref>
+                    <NavigationMenuLink>
+                      {item.title}
+                    </NavigationMenuLink>
+                  </Link>
+                </NavigationMenuItem>
+              ))}
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+              <NavigationMenuItem>
+                <Search className="stroke-[#DAC23A]" />
+              </NavigationMenuItem>
+
+              <NavigationMenuItem>
+                <ShoppingBag className="stroke-[#DAC23A]" />
+              </NavigationMenuItem>
+
+            </NavigationMenuList>
+          </NavigationMenu>
+        </div>
+
+        <div className="block md:hidden">
+
+          <Sheet>
+            <SheetTrigger>
+              <AlignCenter className="stroke-[#DAC23A] w-8 h-8" />
+            </SheetTrigger>
+            <SheetContent>
+              <NavigationMenu>
+                <NavigationMenuList className="flex flex-col items-start gap-4 p-4">
+                  {menuItems.map((item, index) => (
+                    <NavigationMenuItem key={index}>
+                      <Link href={item.href} legacyBehavior passHref>
+                        <NavigationMenuLink>
+                          {item.title}
+                        </NavigationMenuLink>
+                      </Link>
+                    </NavigationMenuItem>
+                  ))}
+
+                </NavigationMenuList>
+              </NavigationMenu>
+            </SheetContent>
+          </Sheet>
+
+        </div>
+      </header>
+
+      <main className="flex overflow-hidden">
+
+        <div className="hidden md:block">
+          <div className="absolute top-[50px] left-[-200px] w-[500px] h-[800px] overflow-hidden">
             <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
+              src={flores}
+              alt="Descrição da imagem"
+              width={450}
+              height={250}
+              className="-rotate-12 "
             />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+
+            <Image
+              src={flores}
+              alt="Descrição da imagem"
+              width={450}
+              height={250}
+              className="-rotate-12"
+            />
+          </div>
+
+          <div>
+            <div className="flex-1"></div>
+          </div>
+
+          <div className="relative top-[-90px] right-[-220px] w-[500px] h-[800px] overflow-hidden">
+            <Image
+              src={flores}
+              alt="Descrição da imagem"
+              width={500}
+              height={300}
+              className="rotate-[-48deg]"
+            />
+
+            <Image
+              src={flores}
+              alt="Descrição da imagem"
+              width={500}
+              height={300}
+              className="rotate-[-48deg]"
+            />
+          </div>
+
+        </div>
+
+        <div className="block md:hidden">
+          <div className="absolute top-[20px] left-[-120px] w-[500px] h-[800px] overflow-hidden">
+            <Image
+              src={flores}
+              alt="Descrição da imagem"
+              width={244}
+              height={688}
+              className="rotate-[-15deg]"
+            />
+
+            <Image
+              src={flores}
+              alt="Descrição da imagem"
+              width={244}
+              height={688}
+              className="rotate-[-15deg] absolute top-[420px]"
+            />
+          </div>
+
+          <div>
+            <div className="flex-1"></div>
+          </div>
+
+          <div className="relative top-[-90px] right-[-380px] w-[500px] h-[800px] overflow-hidden">
+            <Image
+              src={flores}
+              alt="Descrição da imagem"
+              width={244}
+              height={688}
+              className="rotate-[-38deg]"
+            />
+
+            <Image
+              src={flores}
+              alt="Descrição da imagem"
+              width={244}
+              height={688}
+              className="rotate-[-38deg] absolute top-[420px]"
+            />
+          </div>
+
         </div>
       </main>
       <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+
       </footer>
     </div>
   );
