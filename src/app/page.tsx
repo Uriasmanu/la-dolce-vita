@@ -200,7 +200,7 @@ export default function Home() {
             />
           </div>
 
-          <div className="absolute top-21 ml-4 w-[350px]">
+          <div className="absolute top-21 ml-12 w-[350px]">
 
             <div className="flex flex-col-reverse w-[20rem] h-[25rem] gap-5">
               <div>
