@@ -3,6 +3,8 @@
 import * as React from "react"
 import Link from "next/link"
 import flores from '../../public/img/flores.png';
+import bolo from '../../public/img/bolo.png';
+
 
 import {
   NavigationMenu,
@@ -25,6 +27,7 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet"
 import Image from "next/image"
+import { Button } from "@/components/ui/button";
 
 
 const menuItems: { title: string; href: string }[] = [
@@ -52,7 +55,7 @@ const menuItems: { title: string; href: string }[] = [
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-end min-h-screen pl-8 pt-8 pb-20 gap-8 sm:pl-15 sm:pt-15 sm:pb-20 font-[family-name:var(--font-geist-sans)]">
+    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-end min-h-screen pt-8 pb-20 gap-8 pl-0 sm:pt-15 sm:pb-20 font-[family-name:var(--font-geist-sans)]">
       <header>
         <div className="hidden md:block pr-30">
           <NavigationMenu>
@@ -82,7 +85,7 @@ export default function Home() {
         <div className="block md:hidden">
 
           <Sheet>
-            <SheetTrigger>
+            <SheetTrigger className="mr-8">
               <AlignCenter className="stroke-[#DAC23A] w-8 h-8" />
             </SheetTrigger>
             <SheetContent>
@@ -106,10 +109,10 @@ export default function Home() {
         </div>
       </header>
 
-      <main className="flex overflow-hidden">
+      <main className="flex overflow-hidden relative w-full h-[90vh]">
 
         <div className="hidden md:block">
-          <div className="absolute top-[50px] left-[-200px] w-[500px] h-[800px] overflow-hidden">
+          <div className="absolute top-[-70px] left-[-220px] w-[500px] h-[800px] overflow-hidden">
             <Image
               src={flores}
               alt="Descrição da imagem"
@@ -127,11 +130,38 @@ export default function Home() {
             />
           </div>
 
-          <div>
-            <div className="flex-1"></div>
+          <div className="absolute top-40 ml-40 w-[300px]">
+
+            <div className="flex w-[70rem] h-[20rem] gap-10">
+              <div>
+                <Image
+                  src={bolo}
+                  alt="Descrição da imagem"
+                  width={650}
+                  height={400}
+                />
+              </div>
+
+              <div className="flex flex-col text-center gap-2">
+                <h2 className="text-2xl marck-script-regular text-[#F4DA43]">Chef masterpiece af</h2>
+                <h1 className="text-6xl afacad ">LA DOLCE VITA</h1>
+                <div>
+                  img
+                </div>
+                <p className="text-1xl w-[500px] marck-script-regular">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+                <div className="flex w-full justify-center gap-4 py-4">
+                  <Button className="cursor-pointer rounded-[2px]">DESCOBRIR</Button>
+                  <Button
+                    className="bg-white text-[#DAC23A] border border-[#DAC23A] hover:bg-[#DAC23A]/10 transition-colors cursor-pointer rounded-[2px]"
+                  >COMPRAR</Button>
+                </div>
+              </div>
+
+            </div>
           </div>
 
-          <div className="relative top-[-90px] right-[-220px] w-[500px] h-[800px] overflow-hidden">
+          <div className="absolute top-[-90px] right-[-220px] w-[500px] h-[800px] overflow-hidden">
             <Image
               src={flores}
               alt="Descrição da imagem"
@@ -152,7 +182,7 @@ export default function Home() {
         </div>
 
         <div className="block md:hidden">
-          <div className="absolute top-[20px] left-[-120px] w-[500px] h-[800px] overflow-hidden">
+          <div className="absolute top-[-60px] left-[-160px] w-[500px] h-[800px] overflow-hidden">
             <Image
               src={flores}
               alt="Descrição da imagem"
@@ -170,17 +200,44 @@ export default function Home() {
             />
           </div>
 
-          <div>
-            <div className="flex-1"></div>
+          <div className="absolute top-21 ml-4 w-[350px]">
+
+            <div className="flex flex-col-reverse w-[20rem] h-[25rem] gap-5">
+              <div>
+                <Image
+                  src={bolo}
+                  alt="Descrição da imagem"
+                  width={320}
+                  height={10}
+                />
+              </div>
+
+              <div className="flex flex-col text-center gap-2">
+                <h2 className="text-1xl marck-script-regular text-[#F4DA43]">Chef masterpiece af</h2>
+                <h1 className="text-3xl afacad ">LA DOLCE VITA</h1>
+                <div>
+                  img
+                </div>
+                <p className="text-sm w-[350px] marck-script-regular">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+                <div className="flex w-full justify-center gap-4 py-4">
+                  <Button className="cursor-pointer rounded-[2px]">DESCOBRIR</Button>
+                  <Button
+                    className="bg-white text-[#DAC23A] border border-[#DAC23A] hover:bg-[#DAC23A]/10 transition-colors cursor-pointer rounded-[2px]"
+                  >COMPRAR</Button>
+                </div>
+              </div>
+
+            </div>
           </div>
 
-          <div className="relative top-[-90px] right-[-380px] w-[500px] h-[800px] overflow-hidden">
+          <div className="relative top-[-60px] right-[-290px] w-[500px] h-[800px] overflow-hidden">
             <Image
               src={flores}
               alt="Descrição da imagem"
               width={244}
               height={688}
-              className="rotate-[-38deg]"
+              className="rotate-[-35deg]"
             />
 
             <Image
@@ -188,7 +245,7 @@ export default function Home() {
               alt="Descrição da imagem"
               width={244}
               height={688}
-              className="rotate-[-38deg] absolute top-[420px]"
+              className="rotate-[-35deg] absolute top-[420px]"
             />
           </div>
 
