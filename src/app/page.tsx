@@ -576,7 +576,7 @@ export default function Home() {
 
           <div className="relative sm:top-[35%] top-[-130px] sm:w-[100%] flex gap-5 px-[8%] h-[32rem] overflow-x-scroll scroll-snap-x scroll-snap-mandatory">
             {valoresItems.map((item, index) => (
-              <div key={index} className="border border-[#D4D4D4] py-[3%] sm:w-[20rem] w-[290px] h-[400px] flex-shrink-0 scroll-snap-align-start">
+              <div key={index} className="border border-[#D4D4D4] py-[3%] sm:w-[18rem] w-[290px] h-[400px] flex-shrink-0 scroll-snap-align-start">
                 <div className="flex flex-col items-center gap-8">
                   <h3 className="m-8 text-3xl text-[#DAC23A]">{item.title}</h3>
                   <div className="border border-[#D4D4D4] w-full"></div>
