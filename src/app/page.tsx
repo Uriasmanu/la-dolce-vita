@@ -5,6 +5,7 @@ import Link from "next/link"
 import flores from '../../public/img/flores.png';
 import chocolate from '../../public/img/chocolate.png';
 import bolo from '../../public/img/bolo.png';
+import boloVerde from '../../public/img/boloVerde.png';
 
 
 import {
@@ -587,7 +588,32 @@ export default function Home() {
               </div>
             ))}
           </div>
+          <div className="sm:flex relative sm:top-[40%] top-[-65px] sm:left-[5%] sm:h-[30rem] sm:w-[75%]">
 
+            <div className="flex flex-col w-full h-[15rem] gap-5">
+
+              <div className="flex flex-col text-center gap-2 items-center w-[20rem]">
+                <h1 className="sm:text-3xl text-2xl afacad ">SWEET OFFERS</h1>
+                <div className="flex w-[80%] items-center gap-1">
+                  <Diamond className="stroke-[#DAC23A] w-6 h-6" />
+                  <div className="border border-[#DAC23A] bg-[#DAC23A] w-full h-0.5"></div>
+                </div>
+              </div>
+              <div className="px-16 ">
+                <p className="sm:text-1xl font-bold">COCONOUT TRUFFLE</p>
+                <p>Cream, cockies, biscuites, hazelnut...............................$9</p>
+              </div>
+            </div>
+            <div>
+              <Image
+                src={boloVerde}
+                alt="Descrição da imagem"
+                width={680}
+                height={150}
+                className="sm:w-full w-[85%] ml-5 h-auto"
+              />
+            </div>
+          </div>
         </div>
       </main >
       <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
