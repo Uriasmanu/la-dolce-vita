@@ -88,6 +88,13 @@ const cardapioItems: {
     },
   ];
 
+const massasRecheios: { massa: string, recheio: string }[] = [
+  { massa: "Baunilha", recheio: "Mousse de Leite Ninho" },
+  { massa: "Red Velvet", recheio: "Brigadeiro" },
+  { massa: "Chocolate", recheio: "Geleia de Morango" },
+  { massa: "Chocolate", recheio: "Mousse de Chocolate" }
+];
+
 export default function Home() {
   const { sendMessage } = useWhatsApp();
 
@@ -496,14 +503,14 @@ export default function Home() {
               <div className="flex w-[80rem] h-[20rem] justify-center">
 
                 <div className="flex flex-col text-center gap-2 items-center">
-                  <h2 className="text-2xl marck-script-regular text-[#F4DA43]">best deals for you</h2>
-                  <h1 className="text-6xl afacad ">SWEET OFFERS</h1>
+                  <h2 className="text-2xl marck-script-regular text-[#F4DA43]">Ofertas Irresistíveis para Você</h2>
+                  <h1 className="text-6xl afacad ">OFERTAS DOCES</h1>
                   <div className="flex w-[80%] items-center gap-1">
                     <div className="border border-[#DAC23A] bg-[#DAC23A] w-full h-0.5"></div>
                     <Diamond className="stroke-[#DAC23A] w-8 h-8" />
                     <div className="border border-[#DAC23A] bg-[#DAC23A] w-full h-0.5"></div>
                   </div>
-                  <p className="text-1xl w-[500px] marck-script-regular">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+                  <p className="text-1xl w-[500px] marck-script-regular">Conheça nossas opções de bolos e combinações deliciosas! O preço varia de R$ 55,00 a R$ 70,00 o quilo.</p>
 
                 </div>
               </div>
@@ -556,16 +563,18 @@ export default function Home() {
               <div className="flex flex-col-reverse w-[20rem] h-[25rem] gap-5">
 
                 <div className="flex flex-col text-center gap-2 items-center">
-                  <h2 className="text-1xl marck-script-regular text-[#F4DA43]">best deals for you</h2>
-                  <h1 className="text-3xl afacad ">SWEET OFFERS</h1>
+                  <h2 className="text-1xl marck-script-regular text-[#F4DA43]">Ofertas Irresistíveis para Você</h2>
+                  <h1 className="text-3xl afacad ">OFERTAS DOCES</h1>
                   <div className="flex w-[80%] items-center gap-1">
                     <div className="border border-[#DAC23A] bg-[#DAC23A] w-full h-0.5"></div>
                     <Diamond className="stroke-[#DAC23A] w-8 h-8" />
                     <div className="border border-[#DAC23A] bg-[#DAC23A] w-full h-0.5"></div>
                   </div>
-                  <p className="text-sm w-[350px] marck-script-regular">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
-
+                  <p className="text-sm w-[280px] marck-script-regular">
+                    Conheça nossas opções de bolos e combinações deliciosas! O preço varia de R$ 55,00 a R$ 70,00 o quilo.
+                  </p>
                 </div>
+
               </div>
 
             </div>
@@ -609,29 +618,34 @@ export default function Home() {
               </div>
             ))}
           </div>
-          <div className="sm:flex relative sm:top-[40%] top-[-65px] sm:left-[5%] sm:h-[30rem] sm:w-[75%]">
+          <div className="sm:flex relative sm:top-[35%] top-[-65px] sm:left-[5%] sm:h-[30rem] sm:w-[75%] justify-evenly">
 
             <div className="flex flex-col w-full h-[15rem] gap-5">
 
-              <div className="flex flex-col text-center gap-2 items-center w-[20rem]">
-                <h1 className="sm:text-3xl text-2xl afacad ">SWEET OFFERS</h1>
+              <div className="flex flex-col text-center gap-2 items-center sm:w-[30rem]">
+                <h1 className="sm:text-3xl text-2xl afacad w-full">Opções de Combinação:</h1>
                 <div className="flex w-[80%] items-center gap-1">
                   <Diamond className="stroke-[#DAC23A] w-6 h-6" />
                   <div className="border border-[#DAC23A] bg-[#DAC23A] w-full h-0.5"></div>
                 </div>
               </div>
-              <div className="px-16 ">
-                <p className="sm:text-1xl font-bold">COCONOUT TRUFFLE</p>
-                <p>Cream, cockies, biscuites, hazelnut...............................$9</p>
+              <div className="px-16">
+                {massasRecheios.map((opcao, index) => (
+                  <div key={index} className="mb-4">
+                    <p className="sm:text-1xl font-bold">{opcao.massa}</p>
+                    <p>{opcao.recheio}</p>
+                  </div>
+                ))}
               </div>
+
             </div>
-            <div>
+            <div className="sm:w-[70rem]">
               <Image
                 src={boloVerde}
                 alt="Descrição da imagem"
                 width={680}
                 height={150}
-                className="sm:w-full w-[85%] ml-5 h-auto"
+                className="sm:w-full w-[85%] ml-5 h-auto sm:my-0 my-[8rem]"
               />
             </div>
           </div>
