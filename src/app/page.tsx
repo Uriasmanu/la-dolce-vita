@@ -24,6 +24,7 @@ import {
 } from "@/components/ui/sheet"
 import Image from "next/image"
 import { Button } from "@/components/ui/button";
+import { useWhatsApp } from "@/hook/useWhatsApp";
 
 
 const menuItems: { title: string; href: string }[] = [
@@ -49,34 +50,47 @@ const menuItems: { title: string; href: string }[] = [
   },
 ]
 
-const valoresItems: { title: string; preco: string; descricao: string; textoButton: string; }[] = [
-  {
-    title: "standard",
-    preco: "R$99",
-    descricao: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt",
-    textoButton: "READ MORE",
-  },
-  {
-    title: "standard",
-    preco: "R$99",
-    descricao: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt",
-    textoButton: "READ MORE",
-  },
-  {
-    title: "standard",
-    preco: "$99",
-    descricao: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt",
-    textoButton: "READ MORE",
-  },
-  {
-    title: "standard",
-    preco: "R$99",
-    descricao: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt",
-    textoButton: "READ MORE",
-  },
-]
+
+const cardapioItems: {
+  title: string;
+  fatias: string;
+  peso: string;
+  recheios: string;
+  textoButton: string;
+}[] = [
+    {
+      title: "Bento Cake",
+      fatias: "2 a 4 fatias",
+      peso: "(400g a 500g)",
+      recheios: "Opções de recheio disponíveis sob consulta.",
+      textoButton: "Saber Mais",
+    },
+    {
+      title: "Bolo P",
+      fatias: "10 a 15 fatias",
+      peso: "(1kg a 1,5kg)",
+      recheios: "Opções de recheio disponíveis sob consulta.",
+      textoButton: "Saber Mais",
+    },
+    {
+      title: "Bolo M",
+      fatias: "20 a 25 fatias",
+      peso: "(2kg a 2,5kg)",
+      recheios: "Opções de recheio disponíveis sob consulta.",
+      textoButton: "Saber Mais",
+    },
+    {
+      title: "Bolo G",
+      fatias: "30 a 35 fatias",
+      peso: "(3kg a 3,5kg)",
+      recheios: "Opções de recheio disponíveis sob consulta.",
+      textoButton: "Saber Mais",
+    },
+  ];
 
 export default function Home() {
+  const { sendMessage } = useWhatsApp();
+
   return (
     <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-end min-h-screen pt-8 pb-20 gap-8 pl-0 sm:pt-15 sm:pb-20 font-[family-name:var(--font-geist-sans)]">
       <header>
@@ -575,15 +589,22 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="relative sm:top-[35%] top-[-130px] sm:w-[100%] flex gap-5 px-[8%] h-[32rem] overflow-x-auto scroll-snap-x scroll-snap-mandatory no-scrollbar">
-            {valoresItems.map((item, index) => (
-              <div key={index} className="border border-[#D4D4D4] py-[3%] sm:w-[18rem] w-[290px] h-[30rem] flex-shrink-0 scroll-snap-align-start">
-                <div className="flex flex-col items-center gap-8">
-                  <h3 className="m-8 text-3xl text-[#DAC23A]">{item.title}</h3>
+          <div className="relative sm:top-[35%] top-[-130px] sm:w-[100%] flex gap-5 px-[8%] h-[30rem] overflow-x-auto scroll-snap-x scroll-snap-mandatory no-scrollbar">
+            {cardapioItems.map((item, index) => (
+              <div key={index} className="border border-[#D4D4D4] py-[3%] sm:w-[18rem] w-[290px] h-[25rem] flex-shrink-0 scroll-snap-align-start">
+                <div className="flex flex-col items-center gap-4 p-4">
+                  <h3 className="text-3xl text-[#DAC23A]">{item.title}</h3>
+                  <p className="text-lg font-semibold">{item.fatias}</p>
+                  <p className="text-gray-600">{item.peso}</p>
                   <div className="border border-[#D4D4D4] w-full"></div>
-                  <p className="flex items-center bg-white h-8 px-[25%] relative top-[-45px] text-3xl">{item.preco}</p>
-                  <p className="text-center px-8 w-full">{item.descricao}</p>
-                  <button className="px-6 py-2 bg-[#DAC23A] text-white rounded-lg">{item.textoButton}</button>
+                  <p className="text-center px-4 text-gray-700">{item.recheios}</p>
+                  <button
+                    className="mt-4 px-6 py-2 bg-[#DAC23A] text-white rounded-lg cursor-pointer"
+                    onClick={() => sendMessage(item.title, item.fatias)}
+                  >
+                    {item.textoButton}
+
+                  </button>
                 </div>
               </div>
             ))}
