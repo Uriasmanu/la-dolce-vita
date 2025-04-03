@@ -609,7 +609,7 @@ export default function Home() {
                   <p className="text-center px-4 text-gray-700">{item.recheios}</p>
                   <button
                     className="mt-4 px-6 py-2 bg-[#DAC23A] text-white rounded-lg cursor-pointer"
-                    onClick={() => sendMessage(item.title, item.fatias)}
+                    onClick={() => sendMessage(item.title)}
                   >
                     {item.textoButton}
 
