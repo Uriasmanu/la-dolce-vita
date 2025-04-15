@@ -188,14 +188,15 @@ export default function Home() {
                 </div>
 
                 <div className="flex flex-col text-center gap-2 items-center">
-                  <h2 className="text-2xl marck-script-regular text-[#F4DA43]">Chef masterpiece af</h2>
+                  <h2 className="text-2xl marck-script-regular text-[#F4DA43]">Receitas que encantam</h2>
                   <h1 className="text-6xl afacad ">LA DOLCE VITA</h1>
                   <div className="flex w-[80%] items-center gap-1">
                     <div className="border border-[#DAC23A] bg-[#DAC23A] w-full h-0.5"></div>
                     <Diamond className="stroke-[#DAC23A] w-8 h-8" />
                     <div className="border border-[#DAC23A] bg-[#DAC23A] w-full h-0.5"></div>
                   </div>
-                  <p className="text-1xl w-[500px] marck-script-regular">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                  <p className="text-1xl w-[500px] marck-script-regular">Da escolha dos ingredientes ao toque final: tudo é feito com alma.
+                  </p>
 
                   <div className="flex w-full justify-center gap-4 py-4">
                     <Button className="cursor-pointer rounded-[2px]">DESCOBRIR</Button>
@@ -260,14 +261,15 @@ export default function Home() {
                 </div>
 
                 <div className="flex flex-col text-center gap-2 items-center">
-                  <h2 className="text-1xl marck-script-regular text-[#F4DA43]">Chef masterpiece af</h2>
+                  <h2 className="text-1xl marck-script-regular text-[#F4DA43]">Receitas que encantam</h2>
                   <h1 className="text-3xl afacad ">LA DOLCE VITA</h1>
                   <div className="flex w-[80%] items-center gap-1">
                     <div className="border border-[#DAC23A] bg-[#DAC23A] w-full h-0.5"></div>
                     <Diamond className="stroke-[#DAC23A] w-8 h-8" />
                     <div className="border border-[#DAC23A] bg-[#DAC23A] w-full h-0.5"></div>
                   </div>
-                  <p className="text-sm w-[350px] marck-script-regular">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                  <p className="text-sm w-[350px] marck-script-regular">Da escolha dos ingredientes ao toque final: tudo é feito com alma.
+                  </p>
 
                   <div className="flex w-full justify-center gap-4 py-4">
                     <Button className="cursor-pointer rounded-[2px]">DESCOBRIR</Button>
@@ -347,14 +349,14 @@ export default function Home() {
               <div className="flex w-[80rem] h-[20rem] justify-center">
 
                 <div className="flex flex-col text-center gap-2 items-center">
-                  <h2 className="text-2xl marck-script-regular text-[#F4DA43]">familly traditior</h2>
-                  <h1 className="text-6xl afacad ">OUR STOTY</h1>
+                  <h2 className="text-2xl marck-script-regular text-[#F4DA43]">Doçura com propósito</h2>
+                  <h1 className="text-6xl afacad ">Nossa Historia</h1>
                   <div className="flex w-[80%] items-center gap-1">
                     <div className="border border-[#DAC23A] bg-[#DAC23A] w-full h-0.5"></div>
                     <Diamond className="stroke-[#DAC23A] w-8 h-8" />
                     <div className="border border-[#DAC23A] bg-[#DAC23A] w-full h-0.5"></div>
                   </div>
-                  <p className="text-1xl w-[500px] marck-script-regular">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                  <p className="text-1xl w-[500px] marck-script-regular">Desde pequena, sonhava em viver entre massas e confeitos. Hoje, esse sonho virou realidade — e cada doce é feito com o mesmo carinho de quem nunca desistiu.</p>
 
                   <h2 className="text-2xl ole-regular text-[#D4D4D4]">fernandes</h2>
                 </div>
@@ -427,14 +429,14 @@ export default function Home() {
               <div className="flex flex-col-reverse w-[20rem] h-[25rem] gap-5">
 
                 <div className="flex flex-col text-center gap-2 items-center">
-                  <h2 className="text-1xl marck-script-regular text-[#F4DA43]">Chef masterpiece af</h2>
-                  <h1 className="text-3xl afacad ">LA DOLCE VITA</h1>
+                  <h2 className="text-1xl marck-script-regular text-[#F4DA43]">Doçura com propósito</h2>
+                  <h1 className="text-3xl afacad ">Nossa Historia</h1>
                   <div className="flex w-[80%] items-center gap-1">
                     <div className="border border-[#DAC23A] bg-[#DAC23A] w-full h-0.5"></div>
                     <Diamond className="stroke-[#DAC23A] w-8 h-8" />
                     <div className="border border-[#DAC23A] bg-[#DAC23A] w-full h-0.5"></div>
                   </div>
-                  <p className="text-sm w-[350px] marck-script-regular">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                  <p className="text-sm w-[350px] marck-script-regular">Desde pequena, sonhava em viver entre massas e confeitos. Hoje, esse sonho virou realidade — e cada doce é feito com o mesmo carinho de quem nunca desistiu.</p>
 
                   <h2 className="text-2xl ole-regular text-[#D4D4D4]">fernandes</h2>
                 </div>
