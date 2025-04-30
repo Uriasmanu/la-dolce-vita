@@ -101,7 +101,7 @@ export default function Home() {
   return (
     <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-end min-h-screen pt-8 pb-20 gap-8 pl-0 sm:pt-15 sm:pb-20 font-[family-name:var(--font-geist-sans)]">
       <header>
-        <div className="hidden md:block pr-30">
+        <div className="hidden pr-30">
           <NavigationMenu>
             <NavigationMenuList className="flex gap-8">
               {menuItems.map((item, index) => (
@@ -126,7 +126,7 @@ export default function Home() {
           </NavigationMenu>
         </div>
 
-        <div className="block md:hidden">
+        <div className="hidden">
 
           <Sheet>
             <SheetTrigger className="mr-8">
@@ -465,7 +465,7 @@ export default function Home() {
         </div>
 
         <div className="flex justify-center items-center bg-[#E47A7C] sm:h-[20rem] h-[10rem] relative sm:top-[-70%] top-[-100px]">
-          <h3 className="sm:text-3xl text-2xl text-center ole-regular sm:w-[30%] w-[80%]">If there´s no chocolate in Heaven Im not going</h3>
+          <h3 className="sm:text-3xl text-2xl text-center ole-regular sm:w-[30%] w-[80%]"></h3>
         </div>
 
         <div className="flex flex-col overflow-hidden relative w-screen sm:h-[90rem] sm:top-[-70%] top-[-220px]">
